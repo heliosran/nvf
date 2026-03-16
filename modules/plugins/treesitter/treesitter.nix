@@ -10,6 +10,11 @@ in {
     enable = mkEnableOption "treesitter, also enabled automatically through language options";
 
     fold = mkEnableOption "fold with treesitter";
+    foldEnable = mkOption {
+      type = bool;
+      default = false;
+      description = "Whether folds should be enabled when treesitter folding is configured.";
+    };
     autotagHtml = mkEnableOption "autoclose and rename html tag";
 
     grammars = mkOption {

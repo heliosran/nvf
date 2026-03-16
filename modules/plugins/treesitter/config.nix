@@ -57,7 +57,7 @@ in {
               -- This is optional, but is set rather as a sane default.
               -- If unset, opened files will be folded by automatically as
               -- the files are opened
-              vim.o.foldenable = false
+              vim.o.foldenable = ${if cfg.foldEnable then "true" else "false"}
             end,
           })
         ''}
